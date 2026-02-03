@@ -1,0 +1,31 @@
+cardio_task :
+  description: >
+    Analyze the chest pain case for cardiac causes and provide your clinical assessment.
+    Provide structured output. You MUST output a valid JSON object and nothing else
+    STRICT OUTPUT RULES:
+    - Output MUST be valid JSON
+    - Do NOT include markdown
+    - Do NOT include comments
+    - Do NOT include trailing commas
+    - Do NOT include any text outside the JSON object
+  agent: cardiology_agent
+
+pulm_task:
+  description: >
+    Analyze chest pain case for non-cardiac causes. Provide structured output.
+  agent: pulmonology_agent
+
+internal_task:
+  description: >
+    Analyze the ER chest pain case focusing on benign or non-life-threatening causes.
+    Rules:
+    - Do NOT dismiss serious diagnoses
+    - Output valid JSON only  
+    STRICT RULES:
+    - Output ONLY valid JSON
+    - No markdown
+    - No explanations
+    - No backticks
+    - No comments
+
+  agent: internal_medicine_agent  
