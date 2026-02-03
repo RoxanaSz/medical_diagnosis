@@ -1,18 +1,37 @@
 cardio_task :
   description: >
-    Analyze the chest pain case for cardiac causes and provide your clinical assessment.
-    Provide structured output. You MUST output a valid JSON object and nothing else
-    STRICT OUTPUT RULES:
-    - Output MUST be valid JSON
-    - Do NOT include markdown
-    - Do NOT include comments
-    - Do NOT include trailing commas
-    - Do NOT include any text outside the JSON object
+    Analyze the ER chest pain case from a cardiology perspective.   
+    Rules:
+    - Output valid JSON only
+    - Assume worst-case if data is missing
+  expected_output: >
+    """
+    {
+      "hypothesis": string,
+      "confidence": float (0-1),
+      "supporting_findings": [string],
+      "actions_recommended": [string],
+      "risk_if_missed": "Low" | "Moderate" | "High"
+    }
+    """  
   agent: cardiology_agent
 
 pulm_task:
   description: >
-    Analyze chest pain case for non-cardiac causes. Provide structured output.
+    Analyze the ER chest pain case considering non-cardiac emergent causes.
+    Rules:
+    - Output valid JSON only
+    - Explicitly state uncertainty
+  expected_output: >
+    """
+    {
+      "hypothesis": string,
+      "confidence": float (0-1),
+      "alternative_diagnoses": [string],
+      "actions_recommended": [string],
+      "risk_if_missed": "Low" | "Moderate" | "High"
+    }
+    """ 
   agent: pulmonology_agent
 
 internal_task:
@@ -20,12 +39,15 @@ internal_task:
     Analyze the ER chest pain case focusing on benign or non-life-threatening causes.
     Rules:
     - Do NOT dismiss serious diagnoses
-    - Output valid JSON only  
-    STRICT RULES:
-    - Output ONLY valid JSON
-    - No markdown
-    - No explanations
-    - No backticks
-    - No comments
-
-  agent: internal_medicine_agent  
+    - Output valid JSON only
+  expected_output: >
+    """
+    {
+      "hypothesis": string,
+      "confidence": float (0-1),
+      "conditions_not_ruled_out": [string],
+      "actions_recommended": [string],
+      "risk_if_missed": "Low" | "Moderate" | "High"
+    }
+    """    
+  agent: internal_medicine_agent

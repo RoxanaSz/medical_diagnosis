@@ -181,21 +181,21 @@ class NewErDiagnosis():
     def cardio_task(self) -> Task:
         return Task(
             config=self.tasks_config['cardio_task'], # type: ignore[index]
-            expected_output = output_format1 #expected_output2
+            #expected_output = output_format1 #expected_output2
         )
 
     @task
     def pulm_task(self) -> Task:
         return Task(
             config=self.tasks_config['pulm_task'], # type: ignore[index]
-            expected_output = output_format2
+            #expected_output = output_format2
         )
     
     @task
     def internal_task(self) -> Task:
         return Task(
             config=self.tasks_config['internal_task'], # type: ignore[index]
-            expected_output = output_format3,
+            #expected_output = output_format3,
             output_file='report.md'
         )
 

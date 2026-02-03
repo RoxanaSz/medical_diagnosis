@@ -1,26 +1,29 @@
+```json
 {
-  "hypothesis": "Benign or non-life-threatening causes of chest pain, such as musculoskeletal pain (e.g., costochondritis, muscle strain), gastrointestinal disorders (e.g., GERD, esophageal spasm), or anxiety/panic disorder, are the likely etiology after initial stabilization and preliminary exclusion of immediately life-threatening cardiac and acute pleuropulmonary pathologies.",
+  "hypothesis": "While life-threatening causes of chest pain must always be explicitly and aggressively ruled out in the Emergency Room, a significant proportion of chest pain presentations are ultimately attributed to benign or non-life-threatening etiologies. Given no specific clinical context, common benign considerations include musculoskeletal pain (e.g., costochondritis, intercostal strain, rib fracture), gastroesophageal reflux disease (GERD), anxiety/panic attacks, and pleurisy (often viral or inflammatory). The diagnostic approach should prioritize ruling out emergent conditions efficiently and then systematically evaluate for benign causes in a cost-conscious manner.",
   "confidence": 0.7,
   "conditions_not_ruled_out": [
-    "Acute Coronary Syndrome (ACS)",
-    "Acute Aortic Syndrome (Aortic Dissection, Intramural Hematoma, Penetrating Ulcer)",
+    "Acute Coronary Syndrome (ACS): ST-elevation Myocardial Infarction (STEMI), Non-ST-elevation Myocardial Infarction (NSTEMI), Unstable Angina",
+    "Acute Aortic Dissection",
     "Pulmonary Embolism (PE)",
-    "Tension Pneumothorax or large spontaneous pneumothorax",
-    "Esophageal Rupture (Boerhaave's syndrome)",
-    "Pericardial Tamponade",
-    "Severe Myocarditis/Pericarditis with hemodynamic compromise",
-    "Severe Pneumonia with sepsis or respiratory failure",
-    "Acute Pancreatitis with systemic complications"
+    "Tension Pneumothorax / Spontaneous Pneumothorax",
+    "Esophageal Rupture (Boerhaave's Syndrome)",
+    "Cardiac Tamponade (secondary to pericardial effusion)",
+    "Myocarditis / Pericarditis with hemodynamic compromise",
+    "Severe Pneumonia / Pleurisy with respiratory failure"
   ],
   "actions_recommended": [
-    "Conduct a thorough focused history to elicit characteristics suggestive of benign causes: reproducible pain with palpation or movement (musculoskeletal), relation to food or swallowing (GI), heartburn or regurgitation (GERD), recent stressors or panic attack history (anxiety).",
-    "Perform a detailed physical examination including meticulous chest wall palpation for focal tenderness (costochondritis, muscle strain, rib fracture), assessment of dermatomal pain patterns (herpes zoster, radiculopathy), abdominal examination for epigastric or right upper quadrant tenderness, and careful auscultation for cardiac or pulmonary abnormalities.",
-    "Review all initial diagnostic results (ECG, serial troponins, Chest X-ray, D-dimer if obtained) to confirm the low likelihood of acute cardiac or emergent pleuropulmonary pathology.",
-    "Consider a trial of therapeutic interventions specific to benign causes: antacids or proton pump inhibitors (PPIs) for suspected GERD, NSAIDs or acetaminophen for musculoskeletal pain (if no contraindications).",
-    "If anxiety/panic disorder is strongly suspected after excluding organic causes, provide reassurance and consider short-acting anxiolytics if indicated and appropriate.",
-    "If gastrointestinal causes persist as a leading differential, consider focused laboratory tests (e.g., amylase, lipase, liver function tests) and potential referral for outpatient gastroenterology evaluation (e.g., endoscopy) if symptoms are recurrent or refractory.",
-    "Educate the patient on the benign nature of their symptoms once serious conditions are adequately ruled out, provide discharge instructions, and advise on follow-up with primary care for ongoing management of specific conditions (e.g., chronic GERD, musculoskeletal pain).",
-    "Maintain vigilance and continue to monitor for any changes in vital signs or clinical status that might suggest an evolving or previously unappreciated serious condition, until the patient is stable and discharged or transferred."
+    "Immediate STAT 12-lead Electrocardiogram (ECG) acquisition and rapid interpretation by physician to evaluate for STEMI or other acute ischemic changes.",
+    "Perform a comprehensive, focused history and physical examination to identify risk factors for serious conditions (e.g., CAD risk factors, immobility for PE, trauma for pneumothorax) and elicit specific pain characteristics (e.g., pleuritic, reproducible with palpation, positional, exertional) that may point towards benign or serious etiologies. This is a crucial, cost-effective diagnostic step.",
+    "Establish IV access and draw blood for high-sensitivity cardiac Troponin I/T (initial level), complete blood count (CBC), basic metabolic panel (BMP), and D-dimer (if PERC rule is not met or suspicion for PE is low-intermediate). Consider serial troponin measurements based on validated chest pain pathways (e.g., 0/1hr or 0/2hr).",
+    "Obtain a portable Chest X-ray (CXR) to evaluate for pneumothorax, pleural effusion, pulmonary infiltrates, and mediastinal widening. This is a cost-effective initial imaging modality.",
+    "Implement validated risk stratification tools (e.g., HEART score for ACS, PERC rule/Wells score for PE) to guide further diagnostic testing and disposition, minimizing unnecessary advanced imaging in low-risk patients.",
+    "For patients deemed low-risk for acute coronary syndrome after initial workup (negative ECG, negative initial troponin, low HEART score), consider an observation unit for serial troponin measurements and symptom monitoring, rather than immediate advanced imaging (e.g., stress testing or CTA coronary angiography).",
+    "If musculoskeletal pain is suspected, a trial of analgesics (e.g., NSAIDs, acetaminophen) and reassurance can be initiated after serious causes are reasonably excluded.",
+    "If gastroesophageal reflux disease (GERD) is suspected based on history (e.g., burning pain, post-prandial, responsive to antacids), a trial of antacids or H2 blockers/PPIs can be initiated after serious causes are reasonably excluded.",
+    "Consider empiric treatment for presumed benign conditions (e.g., NSAIDs for costochondritis, antacids for GERD) after critical life-threats are ruled out, with clear discharge instructions and follow-up for symptom persistence or worsening.",
+    "Avoid immediate advanced imaging (e.g., CT Angiography of the Chest, dedicated echocardiography, stress testing) in low-risk patients without clear indications, to maintain a cost-conscious approach while ensuring patient safety through serial assessment."
   ],
   "risk_if_missed": "High"
 }
+```
